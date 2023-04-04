@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr - returns a pointer to the first occurence of character in a string or NULL
+ * _strchr - returns a pointer to the first occurence of character
  * @c: character to input
  * @s: character to input
  *
