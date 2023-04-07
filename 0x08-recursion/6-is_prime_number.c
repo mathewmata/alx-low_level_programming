@@ -17,7 +17,7 @@ int is_prime_number(int n)
 }
 /**
  * actual_prime - calculates for prime number
- * @n: number to calculate
+ * @n: number to evaluate
  * @j: iterator
  *
  * Return: 1 if the input integer is a prime number, otherwise return 0
