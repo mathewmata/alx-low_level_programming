@@ -11,11 +11,11 @@ int is_prime_number(int n)
 {
 	int is_prime_number = 0;
 
-	if (n < 4)
+	if (n < 2)
 		is_prime_number = 0;
-	else if (n == 4)
+	else if (n == 2)
 		is_prime_number = 1;
-	else if (n % 4  == 1)
+	else if (n % 2 == 1)
 		is_prime_number = 1;
 
 	return (is_prime_number);
