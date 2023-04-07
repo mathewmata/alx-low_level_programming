@@ -1,5 +1,7 @@
 #include "main.h"
 
+int actual_prime(int n, int j);
+
 /**
  * is_prime_number - function that returns 1 if input integer is a prime number
  * @n: character to input
@@ -9,14 +11,23 @@
 
 int is_prime_number(int n)
 {
-	int is_prime_number = 0;
+	if (n <= 1)
+		return (0);
+	return (actual_prime(n, n - 1));
+}
+/**
+ * actual_prime - calculates for prime number
+ * @n: number to calculate
+ * @j: iterator
+ *
+ * Return: 1 if the input integer is a prime number, otherwise return 0
+ */
 
-	if (n < 2)
-		is_prime_number = 0;
-	else if (n == 2)
-		is_prime_number = 1;
-	else if (n % 2 == 1)
-		is_prime_number = 1;
-
-	return (is_prime_number);
+int actual_prime(int n, int j)
+{
+	if (j == 1)
+		return (1);
+	if (n % j == 0 && j > 0)
+		return (0);
+	return (actual_prime(n, j - 1));
 }
