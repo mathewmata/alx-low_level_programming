@@ -10,17 +10,18 @@
 
 int _atoi(char *s)
 {
-	int j, e, m, len, g, digit;
+	int j, e, n, len, c, digit;
 
 	j = 0;
 	e = 0;
-	m = 0;
+	n = 0;
 	len = 0;
-	g = 0;
+	c = 0;
 	digit = 0;
+
 	while (s[len] != '\0')
 		len++;
-	while (j < len && g == 0)
+	while (j < len && c == 0)
 	{
 		if (s[j] == '-')
 			++e;
@@ -29,17 +30,17 @@ int _atoi(char *s)
 			digit = s[j] - '0';
 			if (e % 2)
 				digit = -digit;
-			m = m * 10 + digit;
-			e = 1;
+			n = n * 10 + digit;
+			c = 1;
 			if (s[j + 1] < '0' || s[j + 1] > '9')
 				break;
-			e = 0;
+			c = 0;
 		}
 		j++;
 	}
-	if (g == 0)
+	if (c == 0)
 		return (0);
-	return (m);
+	return (n);
 }
 
 /**
@@ -63,5 +64,7 @@ int main(int argc, char *argv[])
 	num2 = _atoi(argv[2]);
 	result = num1 * num2;
 	printf("%d\n", result);
+
 	return (0);
 }
+
